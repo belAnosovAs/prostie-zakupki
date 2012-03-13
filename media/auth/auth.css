@@ -1,0 +1,35 @@
+.b-head-menu-unauthorized{
+	list-style-type: none;
+	line-height: 46px;
+	text-align: right;
+}
+
+.b-head-menu-unauthorized li{
+	display: inline;
+	margin: 0 15px;
+}
+
+.b-head-login-form{
+	display:none;
+	background-color:#FFF;
+	font-size:11px
+}
+.b-head-login-form .table-layout{
+	width:95%;
+	margin:0 0 0 auto
+}
+.b-head-login-form TD{font:11px Arial,sans-serif}
+.b-head-login-form .label{padding:0 0 .3em;color:#898989}
+.b-head-login-form .f-field-text{width:90%;margin:0 0 .3em;padding-top:.3em;padding-bottom:.3em;font:12px Arial,sans-serif}
+.b-head-login-form .selector{float:left;white-space:nowrap}
+.b-head-login-form .selector .f-label{line-height:16px}
+.b-head-login-form .selector LABEL{font-size:11px}
+.b-head-login-social{font-size:12px;margin:12px 0 26px;color:#333}
+
+.f-field-chkbox{_position:relative;width:13px;height:13px;margin:1px 4px 0 0;_margin-left:3px;padding:0}
+
+.no{text-decoration:none}
+.no:hover{text-decoration:underline}
+
+.table-layout{width:100%}
+.table-layout TD{padding:0;vertical-align:top}

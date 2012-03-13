@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru-Ru">
+<head>
+<link href="/media/base/base.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/media/base/jquery-1.4.4.js"></script>
+</head>
+
+<body id="page_bg">
+	    
+	<div align="center">
+		<div id="wrapper">
+        
+			<div id="header">
+            
+            	Слоган: Просто - Дешево - Быстро
+                
+                <div id="header_left">
+                	<a href="{% url main %}">
+						<div id="logo">
+                       	 	Вывод логотипа сайта
+                       	</div>
+                   	</a>
+                </div>
+                
+                
+				<div id="header_right">
+                	{% include 'auth.html' %}		
+                </div>
+             
+                
+                <div id="header_centr">
+                	{% include 'main_menu.html' %}	
+                </div>
+                    	
+				
+			</div>
+                       
+            <div>
+				{% include 'user_menu.html' %}	
+			</div>
+                            
+            {% block user_menu %}
+                {% if user.is_authenticated %}	
+                    <div>
+						{% include 'user_menu.html' %}	
+					</div>
+                {% endif %}
+            {% endblock %}
+            
+			<br>
+			
+			{% block pathway %}
+            {% endblock %}
+
+			<div class="clr"></div>
+
+			<div id="whitebox">
+
+				<div id="whitebox_m">
+					<div id="area">
+                    
+                    	{% block content %}
+                    	//Контент сайта
+                    	{% endblock %}    
+					
+						<div class="clr"></div>
+                        <br>
+                        
+					</div> 
+				</div> 
+
+				<div id="footerspacer"></div>
+			</div>
+
+			<div id="footer">
+				<div id="footer_l">
+					<div id="footer_r">
+						<p id="syndicate">
+							Копирайт, контакты, разработчики
+						</p>
+					</div>
+				</div>
+			</div>
+    	</div>
+	</div>
+</body>
+</html>

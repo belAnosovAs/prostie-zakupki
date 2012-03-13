@@ -1,0 +1,92 @@
+/* Tutorial CSS */
+/*Form styles*/
+.styled {
+	font: 15px Arial, sans-serif;
+}
+
+.styled fieldset {
+padding: 0 25px 20px 25px; 
+border:0;
+margin:0;
+padding:0;
+}
+
+.styled fieldset h3 { 
+text-align:center;
+font: 24px bold Arial, sans-serif; 
+color: #B92626;
+margin-bottom: 0.5em;
+}
+
+.styled ul, ol {
+list-style:none;
+}
+
+/* Form rows */
+.styled fieldset li.form-row {
+	margin-bottom: 50px;
+	padding: 3px 0;
+	clear: both;
+}
+
+.styled label {
+	display: block;
+	font-weight: bold;
+	line-height: 24px;
+	padding-top: 4px;
+	color: #555;
+}
+
+.styled label.double {
+padding-top: 0; 
+line-height: 20px; 
+margin-top: -3px;
+}
+
+.styled fieldset li.button-row {
+	margin-bottom: 0;
+	padding: 5px 0 0;
+	text-align: left;
+	clear: both;
+}
+
+/* Text input styles */
+/* Default */
+.styled input.text-input {
+	height: 22px;
+	width: 100%;
+	padding: 5px 8px;
+	font: normal 15px Arial, sans-serif;
+	color: #333;
+	line-height: 1em;
+	float:left;
+	border-radius:5px;
+	border: 1px solid #CCC;
+}
+
+.styled select.text-select {
+	width: 271px;
+	background: url("bg_input.png") no-repeat 0 0;
+	border: none;
+	font: normal 15px Arial, sans-serif;
+	color: #333;
+	line-height: 1em;
+	float:left;
+}
+
+.styled textarea.text-area {
+	width: 100%;
+	padding: 5px 8px;
+	border-radius:5px;
+	border: 1px solid #CCC;
+	font: normal 15px Arial, sans-serif;
+	color: #333;
+	line-height: 1em;
+	float:left;
+	resize: none;
+}
+
+.styled span {
+	float:left;
+}
+

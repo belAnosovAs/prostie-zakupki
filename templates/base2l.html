@@ -1,0 +1,17 @@
+{% extends "base.html" %}     
+
+	{% block content %}
+		
+		<div id="leftcolumn">
+			{% block left_content %}
+				Левое меню
+			{% endblock %}
+		</div>
+	
+		<div id="maincolumn" style="margin-right: 0px;">                   			
+			{% block main_content %}
+                Главный контент			
+			{% endblock %}
+		</div>
+	
+	{% endblock %}

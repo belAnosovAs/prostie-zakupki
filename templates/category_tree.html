@@ -1,0 +1,21 @@
+{% load category_list_tag %}
+
+{% if parent == None %}
+	{% for child in children %}
+		<div>
+			{% category_list purchase_type child %}
+		</div>
+	{% endfor %}
+{% else %}
+
+	{% if parent.parent == None %}
+		<span>{{parent}}</span>
+	{% else %}
+		<a href="{% url purchase_list purchase_type.id  parent.id%}" target="">{{parent}}</a>
+	{% endif %}
+	
+	{% for child in children %}
+		{% category_list purchase_type child %}
+	{% endfor %}
+	
+{% endif %}

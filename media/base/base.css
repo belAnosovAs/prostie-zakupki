@@ -1,0 +1,230 @@
+﻿/*****************************/
+/*** Core html setup stuff ***/
+/*****************************/
+
+html {
+  height: 100%;
+  margin-bottom: 1px;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	line-height: 1.3em;
+	font-size: 12px;
+	color: #333;
+	margin-top: 5px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	min-width:1000px;
+}
+
+/*Ссылки, ранее открытые ссылки*/
+a:link{
+	color: #333;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #444;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+input.button { cursor: pointer; }
+
+p { margin-top: 0; margin-bottom: 5px; }
+
+img { border: 0 none; }
+
+/*****************************************/
+/*** Template specific layout elements ***/
+/*****************************************/
+#page_bg {
+
+}
+
+div.center {
+  text-align: center;
+}
+
+div#wrapper {
+
+
+
+}
+
+body.width_medium div#wrapper {
+	width: 950px;
+}
+
+body.width_small div#wrapper {
+	width: 773px;
+}
+
+body.width_fmax div#wrapper {
+
+}
+
+div#header {
+	height:110px;
+}
+
+div#header_left {
+	float: left;
+	width: 300px;
+}
+
+div#logo {
+	left: 0;
+	top: 0px;
+	width: 300px;
+	height: 75px;
+	background: url(mw_joomla_logo.png) 0 0 no-repeat;
+	margin-left: 30px;
+	margin-top: 0px;
+	margin-top: 25px;
+}
+
+div#header_right {
+	float: right;
+	width: 300px;
+	height:75px;
+}
+
+div#header_centr {
+	margin-top: 30px;
+	margin-left: 300px;
+	margin-right: 300px;
+	margin-top: 50px;
+
+}
+
+#pathway {
+	width: auto;
+	margin-top: 0px;
+	margin-right: 250px;
+	text-align: left;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin-left: 20px;
+}
+
+#whitebox {
+	background: #fff;
+	text-align: left;
+	margin-top: 0;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+	border-radius:10px;
+	border: 1px solid #013953;
+}
+
+#whitebox div {
+
+}
+
+#whitebox_m {
+	width: auto;
+	padding-top: 1px;
+	padding-right: 10px;
+	padding-bottom: 1px;
+	padding-left: 10px;
+}
+
+#area {
+	padding: 0;
+}
+
+#leftcolumn {
+	width:250px;
+	float:left;
+}
+
+#rightcolumn {
+	float:right;
+	width: 250px;
+}
+
+#maincolumn {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: 250px;
+	margin-right: 250px;
+}
+
+
+div#footer_r {
+	padding-top: 10px;
+	height: 47px;
+	overflow: hidden;
+}
+
+div#footer_r div {
+	text-align: center;
+	font-size: .90em;
+	color: #aaa;
+}
+
+div#footer_r a:link, div#footer_r a:visited  {
+	color: #999;
+}
+
+div#footerspacer {
+	height: 10px;
+}
+
+/* headers */
+h1 {
+	padding: 0;
+	font-family:Helvetica ,Arial,sans-serif;
+	font-size: 1.3em;
+	font-weight: bold;
+	vertical-align: bottom;
+	color: #666;
+	text-align: left;
+	width: 100%;
+}
+
+h2 {
+	padding: 0;
+	font-family: Arial, Helvetica,sans-serif;
+	font-size: 1.4em;
+	font-weight: normal;
+	vertical-align: bottom;
+	color: #333;
+	text-align: left;
+	width: 100%;
+}
+
+h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
+}
+
+h3 {
+  margin: 0;
+  font-weight: bold;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 1.5em;
+  padding-left: 0px;
+  margin-bottom: 10px;
+}
+
+
+
+/* spacers */
+.clr {
+	clear: both;
+}

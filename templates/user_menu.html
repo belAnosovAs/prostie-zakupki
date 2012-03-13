@@ -1,0 +1,26 @@
+
+<script type="text/javascript" src="/media/user_menu/iconDock.js"></script>
+
+<div  id="fish-eye">
+<a href="#" title="Комас"><img src="/media/user_menu/Compass_32.png" alt="compass" border="0"/></a>
+<a href="#" title="Фото"><img src="/media/user_menu/Photo_32.png" alt="photo" border="0" /></a>
+<a href="#" ><img src="/media/user_menu/smartphone_32.png" alt="phone" border="0" /></a>
+<a href="#" ><img src="/media/user_menu/video_32.png" alt="video" border="0" /></a>
+<a href="#" ><img src="/media/user_menu/guitar_32.png" alt="guitar" border="0" /></a>
+<a href="#" ><img src="/media/user_menu/lamp_32.png" alt="lamp" border="0" /></a>
+<a href="#" ><img src="/media/user_menu/Computer_32.png" border="0" /></a>
+</div>
+
+<script type="text/javascript">
+var confDock = {
+	iconMinSide : 32,
+	iconMaxSide : 64,
+	distAttDock : 100,
+	coefAttDock : 2,	
+	veloOutDock : 500,
+	valign: 'bottom'
+}
+jQuery(function() {
+ 	jQuery("#fish-eye").addDockEffect(confDock);
+});
+</script>

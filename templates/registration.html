@@ -1,0 +1,70 @@
+{% extends "base1.html" %}
+
+{% block main_content %}
+
+	<link rel="stylesheet" type="text/css" media="all" href="/media/registration/registration.css">
+	<script type="text/javascript" language="javascript" src="/media/registration/registration.js"></script>
+    
+    
+    <div style="width:700px;margin:0 auto">
+        <form id="form-sign-up" class="styled" action="" method="post">
+            <fieldset>
+                <h3>Регистрация нового пользователя!</h3>
+                
+                {% if form.error_dict %}
+                     <p class="error">Пожалуйста исправьте нижеприведённые ошибки.</p>
+                {% endif %}
+                
+                <ol>
+                    {% if form.login.errors %}
+                        {{ form.login.html_error_list }}
+                    {% endif %}
+                    <li class="form-row">
+                        <label for="user_name">Логин:</label>
+                        <input name="user_name" type="text" class="text-input required" />
+                    </li>
+                    
+                    {% if form.password1.errors %}
+                        {{ form.password1.html_error_list }}
+                    {% endif %}
+                    <li class="form-row">
+                        <label>Пароль:</label>
+                        <input name="password1" type="password" id="password-1" class="text-input required password" />
+                    </li>
+                    
+                    {% if form.password2.errors %}
+                        {{ form.password2.html_error_list }}
+                    {% endif %}
+                    <li class="form-row">
+                        <label>Пароль еще раз:</label>
+                        <input name="password2" type="password" id="password-2" class="text-input required password" />
+                    </li>
+                    
+                    {% if form.email.errors %}
+                        {{ form.email.html_error_list }}
+                    {% endif %}
+                    <li class="form-row">
+                        <label>Электронная почта:</label>
+                        <input name="email" type="text" placeholder="user@mail.ru" class="text-input required email" />
+                    </li>
+                    
+                    <li class="form-row">
+                        <label>Имя:</label>
+                        <input name="first_name" type="text" placeholder="Иван" class="text-input" />
+                    </li>
+                    <li class="form-row">
+                        <label>Фамилия:</label>
+                        <input name="last_name" type="text" placeholder="Иванов" class="text-input" />
+                    </li>
+                     <li class="form-row">
+                        <label>Моб. телефон:</label>
+                        <input name="phone" type="text" placeholder="+7920-123-45-67" class="text-input phone" />
+                    </li>
+                    <li class="button-row">
+                        <input type="image" src="/media/registration/btn_sign_up_off.png" alt="Продолжить" value="OK" class="btn-submit img-swap" />
+                    </li>
+                </ol>
+            </fieldset>
+        </form>
+	</div>
+{% endblock %}

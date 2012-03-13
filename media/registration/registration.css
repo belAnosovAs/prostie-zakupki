@@ -1,0 +1,86 @@
+/* Tutorial CSS */
+/*Form styles*/
+.styled {
+	font: 15px Arial, sans-serif;
+}
+
+.styled fieldset {
+padding: 0 25px 20px 25px; 
+border:0;
+margin:0;
+padding:0;
+}
+
+.styled fieldset h3 { 
+text-align:center;
+font: 24px bold Arial, sans-serif; 
+color: #B92626;
+margin-bottom: 0.5em;
+}
+
+.styled ul, ol {
+list-style:none;
+}
+
+/* Form rows */
+.styled fieldset li.form-row {
+	margin-bottom: 40px;
+	padding: 3px 0;
+	clear: both;
+}
+
+.styled label {
+	display: block;
+	font-weight: bold;
+	float: left;
+	width: 150px;
+	line-height: 24px;
+	padding-top: 4px;
+	color: #555;
+}
+
+.styled label.double {
+padding-top: 0; 
+line-height: 20px; 
+margin-top: -3px;
+}
+
+.styled fieldset li.button-row {
+	margin-bottom: 0;
+	padding: 5px 0 0;
+	text-align: left;
+}
+
+/* Text input styles */
+/* Default */
+.styled input.text-input {
+	height: 22px;
+	width: 255px;
+	padding: 5px 8px;
+	background: url("bg_input.png") no-repeat 0 0;
+	border: none;
+	font: normal 15px Arial, sans-serif;
+	color: #333;
+	line-height: 1em;
+	float:left;
+}
+
+/* Form Validation */
+.styled span.error {
+font: bold 11px Arial, sans-serif;
+color:#fff;
+text-shadow: 1px 1px 1px #000;
+display: none; 
+background: url("arrow_error.png") no-repeat 0 center; 
+height: 11px;
+padding: 7px 15px 10px 20px; 
+line-height: 1em; 
+float:left;
+top: 3px; 
+right: 0; 
+border-right: 1px solid #6c0202;
+}
+
+.styled fieldset li.error input.text-input {
+background-position: 0 -64px;
+}

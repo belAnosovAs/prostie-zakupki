@@ -1,0 +1,60 @@
+<link rel="stylesheet" type="text/css" href="/media/auth/auth.css">
+
+<div id="login" class="b-head-login-form">
+	<form method="post" action="#">
+		<table class="table-layout">
+			<colgroup><col width="50%">
+			<col width="50%">
+			<col width="1%">
+			</colgroup>
+			<tbody>
+			<tr>
+				<td colspan="3">
+					<div class="b-head-login-social">
+						Войти через:&nbsp;&nbsp;
+						<a href="http://www.comon.ru/#" onclick="SocialRegistration.openReg(vkProvider);return false;" title="Вконтакте" class="no"><u>ВКонтакте</u></a>&nbsp;&nbsp;&nbsp;
+						<a href="http://www.comon.ru/#" onclick="SocialRegistration.openReg(fbProvider);return false;" title="Facebook" class="no"><u>Facebook</u></a>
+						
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="label"><label for="name">Логин</label></td>
+				<td class="label" colspan="2"><label for="pass">Пароль&nbsp;(<a href="#">забыли?</a>)</label></td>
+			</tr>
+			<tr>
+				<td><input name="name" id="name" type="text" tabindex="101" class="f-field-text"></td>
+				<td><input name="pass" id="pass" type="password" tabindex="102" class="f-field-text"></td>
+				<td><input type="submit" value="ок" tabindex="104" class="button"></td>
+			</tr>
+			<tr>
+				<td>
+					<div class="selector">
+						<input name="autologin" id="autologin" type="checkbox" tabindex="103" class="f-field-chkbox">
+						<span class="f-label"><label for="autologin">запомнить</label></span>
+					</div>
+				</td>
+				<td><a href="{% url registration %}" class="hl">Регистрация</a></td>
+			</tr>
+		</tbody></table>
+	</form>
+</div>
+	
+<script type="text/javascript">
+	function login() {
+		var auth = document.getElementById("auth");
+		var login = document.getElementById("login");
+		var name = document.getElementById("name");
+		auth.style.display="none";
+		login.style.display="block";
+		name.focus();
+	   }
+</script>
+
+<ul id="auth" class="b-head-menu-unauthorized">
+	<li><a class="hl" href="#" onclick="login()">Вход</a></li>
+	<li><a class="hl" href="{% url registration %}" >Регистрация</a></li>
+	<li></li>
+</ul>
+
+

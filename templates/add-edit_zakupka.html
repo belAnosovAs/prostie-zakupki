@@ -1,0 +1,94 @@
+{% extends "base3.html" %}
+
+{% block main_content %}
+
+    <link rel="stylesheet" type="text/css" href="/media/add-edit_zakupka/dd.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="../media/add-edit_zakupka/add-edit_zakupka.css">
+    
+	<script type="text/javascript" src="/media/add-edit_zakupka/jquery.dd.js"></script>
+    
+	<script language="javascript">
+		$(document).ready(function(e) {
+			try {
+				$("body select").msDropDown();
+				} catch(e) {
+				alert(e.message);
+			}
+		});
+	</script>
+    
+    <div style="width:100%;margin:0 auto">
+        <form id="form-sign-up" class="styled" action="" method="post">
+            <fieldset>
+                <h3>Организатор{{org_user}}: cоздание новой закупки</h3>
+                
+                <ol>
+                	<li class="form-row">
+                        <span><img src="/media/add-edit_zakupka/accept.jpg"/></span>
+                        <span>
+                            <ol>
+                                <li class="form-row">
+                                    
+                                    <label for="type">Вид:</label>
+                                    <select name="type" id="type" onchange="showValue(this.value)" class="text-select">
+                                        {% for type in type_list %}
+                                            <option value="{{type.id}}" title="{{type.image}}">{{type.name}}</option>
+                                        {% endfor %}
+                                    </select>
+                                    
+                                    <label for="category">Категория товаров:</label>
+                                    <select name="category" id="category" onchange="showValue(this.value)" class="text-select" style="clear:both">
+                                        {% for category in category_list %}
+                                            <option value="{{category.id}}" title="{{category.image}}">{{category.name}}</option>
+                                        {% endfor %}
+                                        <option value="Чебурашка" title="/media/add-edit_zakupka/info.png">Чебурашка</option>
+                                        <option selected value="Крокодил Гена">Крокодил Гена</option>
+                                        <option value="Шапокляк">Шапокляк</option>
+                                        <option value="Крыса Лариса">Крыса Лариса</option>
+                                    </select>
+
+                                </li>
+                            </ol>
+                        </span>
+
+                    </li>
+                    
+                    <li class="form-row">
+                    
+                        <span><img src="/media/add-edit_zakupka/info.jpg"/></span>
+                        
+                        <span>
+                            <ol style="vertical-align:text-bottom">
+                                <li class="form-row">
+                                    
+                                    <label for="org_percent">Орг. процент %:</label>
+                                    <input name="org_percent" type="text" class="text-input"/>
+                                    
+                                    <label for="minimal_sum">Минималка:</label>
+                                    <input name="minimal_sum" type="text" class="text-input"/>
+               
+                                </li>
+                            </ol>
+                        </span>
+
+                    </li>              
+                    
+                    <li class="form-row">
+                        <label for="image" >Название:</label>
+                        <input name="image" type="text" class="text-input" />
+                        
+                        <label for="tag">Ключевые слова:</label>
+                        <input name="tag" type="text" class="text-input" />
+                        
+                        <label style="clear:both" for="comment">Описание:</label>
+                        <textarea name="comment" rows="15" type="text" class="text-area">Вставить WYSING редактор</textarea>
+                    </li>
+
+                    <li class="button-row">
+                        <input type="image" src="/media/registration/btn_sign_up_off.png" alt="Продолжить" value="OK" class="btn-submit img-swap" />
+                    </li>
+                </ol>
+            </fieldset>
+        </form>
+	</div>
+{% endblock %}

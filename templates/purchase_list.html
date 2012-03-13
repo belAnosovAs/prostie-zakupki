@@ -1,0 +1,76 @@
+{% extends "base2l.html" %}
+
+{% block left_content %}
+	{% include 'category.html' %}	
+{% endblock %}
+
+{% block main_content %}
+
+	{% if purchase_type %}
+
+		<p>{{ purchase_type.comment }}</p>	
+		<link href="/media/purchase_list/purchase_list.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="/media/purchase_list/jquery.tablesorter.pager.css" rel="stylesheet" type="text/css" media="all" />  
+		  
+		<script type="text/javascript" src="/media/purchase_list/jquery.tablesorter.js"></script>
+		<script type="text/javascript" src="/media/purchase_list/jquery.tablesorter.pager.js"></script>
+		<script type="text/javascript">	
+		$(function() {
+			$("table")
+				.tablesorter({ 
+					// меняем кнопку, которая будет управлять сортировкой по нескольким колонкам 
+					sortMultiSortKey: 'ctrlKey', widgets: ['zebra']
+				})
+				.tablesorterPager({container: $("#pager")});
+		});
+				
+		</script>	
+		<div>
+		<table cellspacing="0" id="large">
+			<thead>
+				<tr>
+					<th>Состояние</th>
+					<th>Рейтинг-Название</th>
+					<th>Организатор</th>
+					<th>Орг.%</th>
+					<th>Минималка</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				{% for purchase in purchase_list %}
+				<tr>
+					<td></td>
+					<td><a href="{% url purchase_detail purchase.id %}">{{purchase.name}}</a></td>
+					<td>{{purchase.org_user}}</td>
+					<td>{{purchase.org_percent}}</td>
+					<td>{{purchase.minimal_sum}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		</div>
+
+		<div id="pager" class="pager">
+			<form>
+				<img src="/media/purchase_list/first.png" class="first"/>
+				<img src="/media/purchase_list/prev.png" class="prev"/>
+				<input type="text" class="pagedisplay"/>
+				<img src="/media/purchase_list/next.png" class="next"/>
+				<img src="/media/purchase_list/last.png" class="last"/>
+				<select class="pagesize">
+					<option selected="selected"  value="10">10</option>
+					<option value="20">20</option>
+					<option value="30">30</option>
+					<option  value="99999">Все</option>
+				</select>
+			</form>
+		</div>
+				
+		
+	{% else %}
+		<p>Указанный тип закупки не найден. <a href="{% url main %}">Вернитесь на главную страницу.</a></p>
+	{% endif %}	
+
+
+{% endblock %}

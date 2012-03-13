@@ -1,0 +1,72 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+pre {
+	font-family: "Courier New", Courier, monospace;
+
+	font-size: 14px;
+	width: 100%;
+}
+h1 {
+		
+	font-size: 20px;
+	color: #4D4D4D;
+}
+h3 {
+	font-size: 16px;	
+
+	color: #3D3D3D;
+}
+th {
+	text-align: left;
+	padding: 5px;
+	background-color: #6E6E6E;
+}
+td {
+	color: #4D4D4D;
+	padding: 5px;
+}
+
+table#large {
+	font-size: 12px;
+	background-color: #FFFFFF;
+	width: 100%;
+	border: 1px solid #000;
+}
+.even {
+	background: #FFF
+}
+.odd {
+	background:#CCCCCC
+}
+.highlight {
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.header {
+	background:url("header-bg.png") no-repeat;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #000;
+	border-top: 1px solid #FFF;
+	padding-left: 30px;
+	padding-top: 8px;
+	height: auto;
+}
+.headerSortUp {
+	background:url("header-asc.png") no-repeat;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #000;
+	border-top: 1px solid #FFF;
+	padding-left: 30px;
+	padding-top: 8px;
+	height: auto;
+}
+.headerSortDown {
+	background:url("header-desc.png") no-repeat;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #000;
+	border-top: 1px solid #FFF;
+	padding-left: 30px;
+	padding-top: 8px;
+	height: auto;
+}
