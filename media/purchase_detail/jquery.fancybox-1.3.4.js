@@ -1102,8 +1102,8 @@
 		cyclic : false,
 		scrolling : 'auto',	// 'auto', 'yes' or 'no'
 
-		width : 560,
-		height : 340,
+		width : '75%',
+		height : '75%',
 
 		autoScale : true,
 		autoDimensions : true,

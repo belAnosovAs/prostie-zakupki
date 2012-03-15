@@ -13,26 +13,25 @@ class Category(models.Model):
 		return ('category_url', [str(self.id)])
 		
 	 
-class ZakupkaState(models.Model):
+class PurchaseState(models.Model):
 	name = models.CharField(max_length=30)
 	comment = models.TextField(null=True, blank=True)
 	image = models.ImageField(upload_to='image/purchases/', null=True, blank=True)
 	def __unicode__(self):
 		return self.name
 		
-class ZakupkaType(models.Model):
+class PurchaseType(models.Model):
 	name = models.CharField(max_length=30)
 	comment = models.TextField(null=True, blank=True)
 	image = models.ImageField(upload_to='image/purchases/', null=True, blank=True)
 	def __unicode__(self):
 		return self.name
 	 
-class Zakupka(models.Model):
+class Purchase(models.Model):
 	is_accept = models.NullBooleanField(null=True)
 	org_user = models.ForeignKey(User)
-	type = models.ForeignKey(ZakupkaType)
+	type = models.ForeignKey(PurchaseType)
 	category = models.ForeignKey(Category)
-	state = models.ForeignKey(ZakupkaState)
 	name = models.CharField(max_length=200)
 	org_percent = models.FloatField()
 	minimal_sum = models.FloatField()
@@ -44,13 +43,16 @@ class Zakupka(models.Model):
 	def get_absolute_url(self):
 		return ('zakupka_url', [str(self.id)])
 	
+# История состояний закупки с номерацией жизненных циклов
 class HistoryPurchase(models.Model):
 	date = models.DateField(auto_now_add=True)
-	zakupka = models.ForeignKey(Zakupka)
-	state = models.ForeignKey(ZakupkaState)
+	purchase = models.ForeignKey(Purchase)
+	# порядковый номер жизненного цикла
+	cycle = models.IntegerField()
+	state = models.ForeignKey(PurchaseState)
 	
 class Product(models.Model):
-	zakupka = models.ForeignKey(Zakupka)
+	purchase = models.ForeignKey(Purchase)
 	name = models.CharField(max_length=50)
 	article = models.CharField(max_length=13)
 	link = models.CharField(max_length=250)
@@ -67,6 +69,8 @@ class Product(models.Model):
 class Order(models.Model):
 	date = models.DateTimeField(auto_now_add=True, auto_now=True)
 	user = models.ForeignKey(User)
+	# порядковый номер жизненного цикла закупки
+	cycle = models.IntegerField()
 	product = models.ForeignKey(Product)
 	article = models.CharField(max_length=13) 
 	number = models.IntegerField()

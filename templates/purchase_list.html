@@ -7,24 +7,25 @@
 {% block main_content %}
 
 	{% if purchase_type %}
-
-		<p>{{ purchase_type.comment }}</p>	
 		<link href="/media/purchase_list/purchase_list.css" rel="stylesheet" type="text/css" media="all" />
 		<link href="/media/purchase_list/jquery.tablesorter.pager.css" rel="stylesheet" type="text/css" media="all" />  
 		  
 		<script type="text/javascript" src="/media/purchase_list/jquery.tablesorter.js"></script>
 		<script type="text/javascript" src="/media/purchase_list/jquery.tablesorter.pager.js"></script>
 		<script type="text/javascript">	
-		$(function() {
-			$("table")
-				.tablesorter({ 
-					// меняем кнопку, которая будет управлять сортировкой по нескольким колонкам 
-					sortMultiSortKey: 'ctrlKey', widgets: ['zebra']
-				})
-				.tablesorterPager({container: $("#pager")});
-		});
-				
+			$(function() {
+				$("table")
+					.tablesorter({ 
+						// меняем кнопку, которая будет управлять сортировкой по нескольким колонкам 
+						sortMultiSortKey: 'ctrlKey', widgets: ['zebra']
+					})
+					.tablesorterPager({container: $("#pager")});
+			});		
 		</script>	
+        
+        
+        <p>{{ purchase_type.comment }}</p>	
+        <br />
 		<div>
 		<table cellspacing="0" id="large">
 			<thead>

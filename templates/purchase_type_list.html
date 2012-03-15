@@ -1,0 +1,19 @@
+{% extends "base2l.html" %}
+
+{% block main_content %}
+	
+    {% for type in type_list %}
+    	
+     <div style="padding-bottom:40px; clear:both">
+    	<div style="width:100px; float:left">
+    		<img src="{{type.image}}" width="50" height="50" alt="" />
+        </div>
+        <div style="margin-left:100px">
+    		<h3> <a href="{% url purchase_list type.id 0 %}">{{type.name}}</a> </h3>
+        	<p>{{type.comment}}</p>
+        </div>
+     </div>
+        
+	{% endfor %}
+
+{% endblock %}

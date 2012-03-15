@@ -68,6 +68,7 @@ body, ul, li {
 	outline:0;
 	text-decoration:none;
 	text-shadow: 1px 1px 1px #000;
+	clear:both;
 }
 
 #menu li:hover a {
@@ -108,7 +109,7 @@ body, ul, li {
 
 .dropdown_1column {width: 140px;}
 .dropdown_2columns {width: 270px;}
-.dropdown_3columns {width: 420px;}
+.dropdown_3columns {width: 320px;}
 .dropdown_4columns {width: 560px;}
 .dropdown_5columns {width: 410px;}
 
@@ -138,9 +139,11 @@ body, ul, li {
 .col_2 {
 	width:260px;
 }
-.col_3 {width:400px;}
+.col_3 {width:300px;}
 .col_4 {width:550px;}
 .col_5 {width:400px;}
+
+.col3.p {clear:both;}
 
 #menu .menu_right {
 	float:right;
@@ -166,6 +169,7 @@ body, ul, li {
 	text-align:left;
 	text-shadow: 1px 1px 1px #FFFFFF;
 }
+
 #menu h2 {
 	font-size:21px;
 	font-weight:400;

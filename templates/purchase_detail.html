@@ -1,7 +1,7 @@
 {% extends "base1.html" %}
 
 {% block main_content %}
-	<link rel="stylesheet" type="text/css" media="all" href="../media/purchase_detail/examples.css">
+	<link rel="stylesheet" type="text/css" media="all" href="/media/purchase_detail/examples.css">
 	<link rel="stylesheet" type="text/css" media="all" href="/media/purchase_detail/jquery.fancybox-1.3.4.css">
 
 	<script type="text/javascript" language="javascript" src="/media/purchase_detail/jquery.fancybox-1.3.4.js"></script>
@@ -11,7 +11,7 @@
 			
 			$("#foo1").carouFredSel({
 				auto	: {
-					items 			: 4,
+					items 			: 1,
 					duration		: 7500,
 					easing			: "linear",
 					pauseDuration	: 500,
@@ -73,74 +73,12 @@
 	<div id="foo1">	
 		
 		{% for product in product_list %}
-			<a rel="example_group" href="{{ product.image }}" title="{{ product.name }}">
-				<img src="{{ product.image }}" alt="shoes" width="140" height="140">
-			</a>
-		{% endfor %}	
-		<a rel="example_group" href="/media/purchase_detail/paris.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." height="140">
-			<img src="/media/purchase_detail/paris.jpg" alt="paris" width="140" height="140">
-		</a>
-		<a rel="example_group" class="various iframe" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" title="ваываываыва">
-			<img src="/media/purchase_detail/sunbading.jpg" alt="sunbading" width="140" height="140">
-		</a>
-		<a class="various iframe" href="http://ya.ru" title="ываываыва">
-			<img src="/media/purchase_detail/sunbading.jpg" alt="ываываываыва" width="140" height="140">
-		</a>
-		<a class="various iframe" href="content.html" title="цукуцкцук">
-			<img src="/media/purchase_detail/sunbading.jpg" alt="ролрололор" width="140" height="140">
-		</a>
-        <a rel="example_group" href="/media/purchase_detail/paris.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." height="140">
-			<img src="/media/purchase_detail/paris.jpg" alt="paris" width="140" height="140">
-		</a>
-        <a class="various iframe" href="content.html" title="цукуцкцук">
-			<img src="/media/purchase_detail/sunbading.jpg" alt="ролрололор" width="140" height="140">
-		</a>
-        <a rel="example_group" href="/media/purchase_detail/paris.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." height="140">
-			<img src="/media/purchase_detail/paris.jpg" alt="paris" width="140" height="140">
-		</a>
-        <a class="various iframe" href="content.html" title="цукуцкцук">
-			<img src="/media/purchase_detail/sunbading.jpg" alt="ролрололор" width="140" height="140">
-		</a>
-        <a rel="example_group" href="/media/purchase_detail/paris.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." height="140">
-			<img src="/media/purchase_detail/paris.jpg" alt="paris" width="140" height="140">
-		</a>
-        <a class="various iframe" href="content.html" title="цукуцкцук">
-			<img src="/media/purchase_detail/sunbading.jpg" alt="ролрололор" width="140" height="140">
-		</a>
-        <a rel="example_group" href="/media/purchase_detail/paris.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." height="140">
-			<img src="/media/purchase_detail/paris.jpg" alt="paris" width="140" height="140">
-		</a>
-        <a class="various iframe" href="content.html" title="цукуцкцук">
-			<img src="/media/purchase_detail/sunbading.jpg" alt="ролрололор" width="140" height="140">
-		</a>
-        <a rel="example_group" href="/media/purchase_detail/paris.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." height="140">
-			<img src="/media/purchase_detail/paris.jpg" alt="paris" width="140" height="140">
-		</a>
-        <a class="various iframe" href="content.html" title="цукуцкцук">
-			<img src="/media/purchase_detail/sunbading.jpg" alt="ролрололор" width="140" height="140">
-		</a>
-        <a rel="example_group" href="/media/purchase_detail/paris.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." height="140">
-			<img src="/media/purchase_detail/paris.jpg" alt="paris" width="140" height="140">
-		</a>
-        <a class="various iframe" href="content.html" title="цукуцкцук">
-			<img src="/media/purchase_detail/sunbading.jpg" alt="ролрололор" width="140" height="140">
-		</a>
-        <a rel="example_group" href="/media/purchase_detail/paris.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." height="140">
-			<img src="/media/purchase_detail/paris.jpg" alt="paris" width="140" height="140">
-		</a>
-        <a class="various iframe" href="content.html" title="цукуцкцук">
-			<img src="/media/purchase_detail/sunbading.jpg" alt="ролрололор" width="140" height="140">
-		</a>
-        <a rel="example_group" href="/media/purchase_detail/paris.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." height="140">
-			<img src="/media/purchase_detail/paris.jpg" alt="paris" width="140" height="140">
-		</a>
-        <a class="various iframe" href="content.html" title="цукуцкцук">
-			<img src="/media/purchase_detail/sunbading.jpg" alt="ролрололор" width="140" height="140">
-		</a>
-        <a rel="example_group" href="/media/purchase_detail/paris.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." height="140">
-			<img src="/media/purchase_detail/paris.jpg" alt="paris" width="140" height="140">
-		</a>
-        
+        	<a rel="example_group" class="various iframe" href="{% url product_detail product.id %}" title="{{product.name}}">
+                <img src="{{product.link}}" alt="sunbading" width="140" height="140">
+            </a>
+		{% endfor %}
+
+		
         
 	   
 	</div>

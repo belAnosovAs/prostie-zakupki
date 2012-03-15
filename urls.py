@@ -22,9 +22,10 @@ urlpatterns = patterns('first_site.views',
 
 urlpatterns += patterns('first_site.eshop.views',
 
-	url('^purchase/$', 'view_purchase_type_list', name="purchase_type_list"),
-	url('^purchase(?P<purchase_type>\d{0,1})/category(?P<category_id>\d{1,2})/$', 'view_purchase_list', name="purchase_list"),
-	url('^purchase_detail(?P<purchase_id>\d{1,3})/$', 'view_purchase_detail', name="purchase_detail"),
+	url('^purchase/$', 'purchase_type_list', name="purchase_type_list"),
+	url('^purchase(?P<purchase_type>\d{0,1})/category(?P<category_id>\d{1,2})/$', 'purchase_list', name="purchase_list"),
+	url('^purchase_detail(?P<purchase_id>\d{1,3})/$', 'purchase_detail', name="purchase_detail"),
+	url('^product_detail(?P<product_id>\d{1,3})/$', 'product_detail', name="product_detail"),
 	
 	#Список товаров закупки
 	#url(r'^zakupka(\d{1,2})/$', 'view_product_list', name="zakupka_url"),
